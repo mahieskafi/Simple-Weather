@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="card_view_container_corner_radius">30dp</dimen>
+    <dimen name="forecast_card_view_corner_radius">20dp</dimen>
+
+    <!-- margins-->
+    <dimen name="card_view_city_name_top_margin">16dp</dimen>
+    <dimen name="card_view_horizontally_margin">16dp</dimen>
+    <dimen name="card_view_vertically_margin">16dp</dimen>
+    <dimen name="card_view_detail_margin_start">20dp</dimen>
+    <dimen name="card_view_detail_humidity_margin_start">20dp</dimen>
+    <dimen name="forecast_label_margin">20dp</dimen>
+    <dimen name="forecast_recycler_margin_horizontally">12dp</dimen>
+    <dimen name="forecast_recycler_margin_top">6dp</dimen>
+    <dimen name="forecast_item_margin">4dp</dimen>
+
+    <!--paddings-->
+    <dimen name="card_view_container_description_padding_top">5dp</dimen>
+    <dimen name="card_view_container_description_padding_bottom">16dp</dimen>
+
+    <!--text size-->
+    <dimen name="card_view_name_text_size">20sp</dimen>
+    <dimen name="card_view_description_text_size">20sp</dimen>
+    <dimen name="card_view_label_text_size">14sp</dimen>
+    <dimen name="card_view_details_value_text_size">14sp</dimen>
+    <dimen name="card_view_title_text_size">16sp</dimen>
+    <dimen name="card_view_temp_text_size">50sp</dimen>
+    <dimen name="forecast_card_view_sub_text_size">14sp</dimen>
+    <dimen name="forecast_card_view_time_text_size">16sp</dimen>
+
+    <!-- progress bar-->
+    <dimen name="progress_bar_size">50dp</dimen>
+    <dimen name="progress_bar_margin">16dp</dimen>
+
+
+</resources>

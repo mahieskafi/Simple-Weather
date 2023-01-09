@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="card_view_height">280dp</dimen>
+    <dimen name="forecast_item_card_view_width">112dp</dimen>
+    <dimen name="forecast_item_card_view_height">185dp</dimen>
+
+    <dimen name="image_view_current_weather_height">92dp</dimen>
+    <dimen name="image_view_current_weather_width">92dp</dimen>
+
+    <dimen name="image_view_forecast_height">60dp</dimen>
+    <dimen name="image_view_forecast_width">60dp</dimen>
+</resources>
