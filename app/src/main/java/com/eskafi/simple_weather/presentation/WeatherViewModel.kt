@@ -46,7 +46,7 @@ class WeatherViewModel @Inject constructor(
         }
     }
 
-    private suspend fun loadForecastList(
+     suspend fun loadForecastList(
         latitude: Double,
         longitude: Double
     ) {
@@ -68,7 +68,7 @@ class WeatherViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-    private suspend fun loadCurrentWeather(
+     suspend fun loadCurrentWeather(
         latitude: Double,
         longitude: Double
     ) {
