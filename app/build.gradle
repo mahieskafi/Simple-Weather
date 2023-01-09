@@ -1,20 +1,27 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
 }
 
 android {
     namespace 'com.eskafi.simple_weather'
-    compileSdk 32
+    compileSdk rootProject.compileSdkVersion
 
     defaultConfig {
         applicationId "com.eskafi.simple_weather"
-        minSdk 21
-        targetSdk 32
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String","BASE_URL","\"https://api.openweathermap.org/data/2.5/\"")
+        buildConfigField("String","IMAGE_URL","\"https://openweathermap.org/img/wn/\"")
+        buildConfigField("String","APP_KEY","\"9476640235caa219987eb5ff2215aed6\"")
     }
 
     buildTypes {
@@ -30,14 +37,52 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    implementation "androidx.core:core-ktx:$rootProject.kotlinCore"
+    implementation "androidx.appcompat:appcompat:$rootProject.appCompat"
+    implementation "com.google.android.material:material:$rootProject.androidMaterial"
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.kotlinNavigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.kotlinNavigation"
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$rootProject.hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$rootProject.hiltVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+
+    //Gson
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+
+    //LifeCycle
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
+
+    //LocationServices
+    implementation "com.google.android.gms:play-services-location:$rootProject.locationServiseVersion"
+
+    //UnitTesting
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$rootProject.coroutinesVersion"
+    testImplementation "androidx.test:core:$rootProject.androidCoreTestVersion"
+    testImplementation "com.google.dagger:hilt-android-testing:$rootProject.hiltTestVersion"
+    kaptTest "com.google.dagger:hilt-android-compiler:$rootProject.hiltTestVersion"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "junit:junit:$rootProject.jUnitVersion"
+    testImplementation "com.google.truth:truth:$rootProject.truthVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 }
