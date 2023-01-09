@@ -1,5 +1,8 @@
 package com.eskafi.simple_weather.di
 
+import com.eskafi.simple_weather.BuildConfig
+import com.eskafi.simple_weather.data.api.CurrentTimeApi
+import com.eskafi.simple_weather.data.api.ForecastHourlyApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,5 +43,16 @@ object NetworkModule {
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideCurrentTimeApi(retrofit: Retrofit) : CurrentTimeApi {
+        return retrofit.create(CurrentTimeApi::class.java)
+    }
+    @Provides
+    @Singleton
+    fun provideForecastHourlyApi(retrofit: Retrofit) : ForecastHourlyApi {
+        return retrofit.create(ForecastHourlyApi::class.java)
     }
 }
