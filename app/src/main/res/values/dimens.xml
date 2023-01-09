@@ -34,6 +34,8 @@
     <dimen name="card_view_temp_text_size">50sp</dimen>
     <dimen name="forecast_card_view_sub_text_size">14sp</dimen>
     <dimen name="forecast_card_view_time_text_size">16sp</dimen>
+    <dimen name="card_view_error_text_size">16sp</dimen>
+    <dimen name="card_view_retry_text_size">14sp</dimen>
 
     <!-- progress bar-->
     <dimen name="progress_bar_size">50dp</dimen>

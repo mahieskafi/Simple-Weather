@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.core.widget.ContentLoadingProgressBar
-        android:id="@+id/loading"
+        android:id="@+id/loading_forecast"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="@dimen/progress_bar_size"
         android:layout_height="@dimen/progress_bar_size"
@@ -16,6 +16,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list_label"
         android:theme="@style/ContentProgressBar" />
+
+    <include
+        android:id="@+id/forecast_error_view"
+        layout="@layout/view_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_label" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/list_label"

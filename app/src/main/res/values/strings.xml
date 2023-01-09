@@ -5,6 +5,7 @@
     <string name="feeling_label">Feels like</string>
     <string name="humidity_label">Humidity</string>
     <string name="forecast_list_title">Forecast</string>
+    <string name="retry_button_text">Try again</string>
 
     <string name="icon_suffix">\u00404x.png</string>
     <string name="forecast_icon_suffix">\u00402x.png</string>

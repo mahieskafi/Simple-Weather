@@ -7,6 +7,18 @@
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
+    <style name="ErrorTextView">
+        <item name="android:textSize">@dimen/card_view_error_text_size</item>
+        <item name="android:textColor">@color/text_color_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="RetryView">
+        <item name="android:textSize">@dimen/card_view_retry_text_size</item>
+        <item name="android:textColor">@color/text_color_secondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
     <style name="TextViewTitle">
         <item name="android:textSize">@dimen/card_view_title_text_size</item>
         <item name="android:textColor">@color/black</item>
